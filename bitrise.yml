@@ -1,0 +1,15 @@
+format_version: 11
+default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
+
+workflows:
+  ci:
+    steps:
+    - go-list:
+    - golint:
+    - errcheck:
+    - go-test:
+
+  ci-lts:
+    steps:
+    - go-list:
+    - go-test:
